@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Apresentação</title>
+</head>
+<body>
+    <main>
+        <ul>
+            <a href="https://unifei.edu.br" target="_blank">
+                <li>UNIFEI</li>
+            </a>
+            <a href="https://youtube.com/shorts/SXHMnicI6Pg?si=t7SKqYkOmy57oqTG" target="_blank">
+                <li>PROEX</li>
+            </a>
+            <a href="https://twitter.com/devunifei/status/1774149561314877703?t=rVII4ZWYQVt-yRiabESoGw&s=19" target="_blank">
+                <li>INTEGRA UNIFEI</li>
+            </a>
+        </ul>
+
+        <h1>Formulário de Apresentação de Projetos de Extenção</h1>
+
+        <p>Nesse formulário, sua equipe deverá preencher os dados do seu rojeto de extenção para que a PROEX possa distribuir os stands da forma mais adequada</p>
+
+        <form action="#">
+            <fieldset>
+                <legend>Identificação do Projeto</legend>
+                <label for="nome">Nome do Projeto</label>
+                <input type="text" id="nome" name="nome">
+                <label for="quantidade">Quantidade de Integrantes</label>
+                <input type="text" id="quantidade" name="quantidade">
+                <label for="instituto">Instituto de Localização</label>
+                <input type="text" id="instituto" name="instituto">
+            </fieldset>
+        </form>
+
+        <form action="#">
+            <fieldset>
+                <legend>Área de Atuação</legend>
+                <p>Selecione apenas uma opção</p>
+                
+                <input type="radio" name="web/mobile" id="web/mobile">
+                <label for="web/mobile">Aplicação Web/Mobile</label>
+                <input type="radio" name="jogos" id="jogos">
+                <label for="jogos">Desenvolvimento de Jogos</label>
+                <input type="radio" name="drones" id="drones">
+                <label for="drones">Drones</label>
+                <input type="radio" name="robos" id="robos">
+                <label for="robos">Competição de Robôs</label>
+                <input type="radio" name="contabilidade" id="contabilidade">
+                <label for="contabilidade">Contabilidade</label>
+                <input type="radio" name="meteorologia" id="meteorologia">
+                <label for="meteorologia">Meteorologia</label>
+            </fieldset>
+        </form>
+
+        <form action="#">
+            <fieldset>
+                <legend>Fomento</legend>
+                <label for="tipo">Tipo</label>
+                <select name="projeto" id="projeto">
+                    <option value="Junior">Empresa Junior</option>
+                    <option value="Extencao">Projeto de Extenção</option>
+                    <option value="Complementar">Projeto Complementar</option>
+                </select>
+            </fieldset>
+        </form>
+
+        <button>Enviar</button>
+
+        <p>Feito com &hearts; por <a href="https://github.com/ConsidereSeGerenciado" target="_blank">Eu</a></p>
+
+    </main>
+</body>
+</html>
