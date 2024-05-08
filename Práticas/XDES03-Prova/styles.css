@@ -1,0 +1,66 @@
+main {
+    display: flex;
+    font-family: 'Comme', sans-serif;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#titulo {
+    font-size: 25px;
+}
+
+section{
+    width: 30%;
+}
+
+figure {
+    margin: 0px auto;
+}
+
+img {
+    width: 50%;
+    margin: 0px auto;
+}
+
+.bordas {
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+label {
+    padding: 20px;
+    display: block;
+}
+
+input {
+    width: 50%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+select {
+    width: 50%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(59, 153, 122);
+    color: white;
+    flex-direction: row-reverse;
+    border-radius: 15px;
+    width: 100px;
+    margin: 10px auto;
+}
+
+li{
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    font-size: 15px;
+}
