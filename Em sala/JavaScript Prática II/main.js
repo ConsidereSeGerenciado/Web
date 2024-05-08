@@ -1,34 +1,33 @@
-const btn = document.querySelector('#btn-add');
-const qtdProduto =
-// const 
-// const 
-// const 
+const btn = document.querySelector('button');
+const qtd = document.querySelector('#quantidade');
+const nome = document.querySelector('#nome');
+const pai = document.querySelector('#pai');
+const esconder = document.querySelector('#esconder')
+const texto = `Seu pedido está vazio. Adicione produtos no carrinho!`;
 
-btn.addEvenetListener('click', () => {  
+btn.addEventListener('click', (e) => {
+    let quantidade = qtd.value;
+    let nomes = nome.value;
 
-    // Crear um li
-    // Adicionar o li na ul
+    const newLi = document.createElement('li');
+    const newBtn = document.createElement('button');
 
-    const newItem = document.createElement('li');
+    newBtn.innerText = `x`;
+    newBtn.addEventListener('click', funcDelete);
 
-    newItem.innerText = '${qtdValue}: ${nomeProdutoValue}';
+    newLi.innerText = `${quantidade}: ${nomes}`;
+    
+    newLi.append(newBtn)
 
-    const newDeleteBtn = document.createElement('button');
-    newDeleteBtn.innerText = 'X';
-    newDeleteBtn.addEvenetListener('click', funcaoRemover);
+    pai.append(newLi);
 
-    newItem.insertAdjacentElement('beforeend', newDeleteBtn);
-
-    listaRef.append(newItem);
-
-    pMsgErro.innerText = '';
-
+    esconder.innerText = ``;
 })
 
-const funcaoRemover = (e) => {
+const funcDelete = (e) => {
     e.target.parentNode.remove();
     const lis = document.querySelectorAll('li');
     if(lis.length === 0){
-        pMsgErro.innerText = msgCarrinhoVazio;
+        esconder.innerText = texto;
     }
 }
