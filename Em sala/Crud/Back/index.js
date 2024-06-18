@@ -18,9 +18,30 @@ app.use(express.json());
 app.use(cors());
 
 app.listen(3000, () => {
-    console.log('oii');
+    console.log('Servidor Online');
 });
 
 app.get('/propriedades', (req,res) => {
     res.status(200).json(propriedades);
+});
+
+app.post('/criar-propriedade', (req,res) => {
+
+    const {id, nome, preco, avaliacao} = req.body;
+
+    const novaProp = {
+        // pode omitir quando os nomes são iguais
+        // senão teria q colocar ': nomeVariavel'
+        id,
+        nome,
+        preco,
+        avaliacao
+    };
+
+    propriedades.push(novaProp);
+
+    fs.writeFileSync(bancoPath, JSON.stringify(propriedades,null,2))
+
+    res.status(200).send('OK');
+
 })

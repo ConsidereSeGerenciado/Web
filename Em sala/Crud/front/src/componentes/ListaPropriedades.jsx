@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from 'axios'
 import Propriedades from "./Propriedades";
+import { Link } from "react-router-dom";
 
 export default function ListaPropriedades() {
 
@@ -16,8 +17,12 @@ export default function ListaPropriedades() {
         buscaPropriedades();
     },[]);
     
+    
     return (
         <>
+            <div>
+                <Link to="/criar-propriedade">Adicionar propriedade</Link>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -30,7 +35,7 @@ export default function ListaPropriedades() {
                 <tbody>
                     {
                         propriedades.map( p => {
-                            return <Propriedades key=p.id {...p}/>
+                            return <Propriedades key={p.id} {...p}/>
                         })
                     }
                 </tbody>

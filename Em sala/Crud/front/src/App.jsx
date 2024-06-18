@@ -1,4 +1,5 @@
 import './App.css'
+import Home from './componentes/Home';
 import ListaPropriedades from './componentes/ListaPropriedades'
 
 function App() {

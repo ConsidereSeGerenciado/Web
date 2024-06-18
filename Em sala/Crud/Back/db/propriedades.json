@@ -40,5 +40,11 @@
     "nome": "Hotel Ciriaco",
     "avaliacao": "2.5",
     "preco": "34"
+  },
+  {
+    "id": 1718712425285,
+    "nome": "Teste",
+    "preco": "5000",
+    "avaliacao": "não tem"
   }
 ]
